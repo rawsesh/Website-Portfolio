@@ -306,9 +306,8 @@ With a background in media and communication, she brings a multidisciplinary app
         <!-- Add more slides here... -->
 
       </div>
-
-      <!-- Pagination dots -->
-      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
   </div>
 </section>
@@ -623,15 +622,15 @@ With a background in media and communication, she brings a multidisciplinary app
   <!-- Instagram Embed Script (MUST be placed at end of body) -->
   <script async src="//www.instagram.com/embed.js"></script>
 
-  <script>
+ <script>
   const swiper = new Swiper(".mySwiper", {
     slidesPerView: 3,
     spaceBetween: 30,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
     loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
   });
 </script>
 
