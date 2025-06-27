@@ -64,6 +64,10 @@
   cursor: pointer;
   user-select: none;
 }
+  .swiper-slide blockquote.instagram-media {
+  max-width: 100% !important;
+}
+
 
 
 </style>
@@ -211,6 +215,7 @@ Passionate about purposeful communication and staying ahead of digital trends, I
 
       </div>
     </div>
+    <div class="swiper-controls" style="display: flex; justify-content: center; gap: 30px; margin-top: 20px;">
     <div class="swiper-button-prev"></div>
     <div class="swiper-button-next"></div>
   </div>
@@ -552,17 +557,30 @@ With a background in media and communication, she brings a multidisciplinary app
   <!-- Instagram Embed Script (MUST be placed at end of body) -->
   <script async src="//www.instagram.com/embed.js"></script>
 
- <script>
+  <script>
   const swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
     spaceBetween: 30,
-    loop: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    breakpoints: {
+      // When window width is >= 0px (phones)
+      0: {
+        slidesPerView: 1,
+      },
+      // When window width is >= 600px (tablets)
+      600: {
+        slidesPerView: 2,
+      },
+      // When window width is >= 1024px (desktops)
+      1024: {
+        slidesPerView: 3,
+      }
+    }
   });
 </script>
+
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
