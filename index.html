@@ -53,14 +53,26 @@
   }
 
   .swiper-button-prev,
-  .swiper-button-next {
-    position: static !important;
-    width: auto;
-    height: auto;
-    color: #007bff;
-    font-size: 24px;
-    transform: none !important;
-  }
+.swiper-button-next {
+  position: static !important;
+  width: auto;
+  height: auto;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  color: #007bff;
+  cursor: pointer;
+  user-select: none;
+}
+
+.swiper-button-prev::after {
+  content: "←";
+}
+
+.swiper-button-next::after {
+  content: "→";
+}
+
 </style>
 
 
