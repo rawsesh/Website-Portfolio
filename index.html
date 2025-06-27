@@ -27,6 +27,10 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+
   <!-- =======================================================
   * Template Name: iPortfolio
   * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
@@ -256,53 +260,35 @@ With a background in media and communication, she brings a multidisciplinary app
     <section id="portfolio" class="portfolio section light-background">
   <div class="container section-title" data-aos="fade-up">
     <h2>Portfolio</h2>
-    <p>A horizontal showcase of my work, directly embedded from Instagram.</p>
+    <p>Instagram Work Showcase</p>
   </div>
 
   <div class="container">
-    <div class="instagram-slider" style="display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 20px;">
-      
-      <!-- Post 1 -->
-      <div style="min-width: 320px; flex-shrink: 0; scroll-snap-align: start;">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DCWylY3ID_u/" data-instgrm-version="14" style="width:100%; max-width:320px; margin: auto;"></blockquote>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DCWylY3ID_u/" data-instgrm-version="14" style="width:100%; max-width:300px; margin:auto;"></blockquote>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DCbj0_5NCKj/" data-instgrm-version="14" style="width:100%; max-width:300px; margin:auto;"></blockquote>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DDPLJbyWBX/" data-instgrm-version="14" style="width:100%; max-width:300px; margin:auto;"></blockquote>
+        </div>
+
+        <!-- Add more slides here... -->
+
       </div>
 
-      <!-- Post 2 -->
-      <div style="min-width: 320px; flex-shrink: 0; scroll-snap-align: start;">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DCbj0_5NCKj/" data-instgrm-version="14" style="width:100%; max-width:320px; margin: auto;"></blockquote>
-      </div>
-
-      <!-- Post 2 -->
-      <div style="min-width: 320px; flex-shrink: 0; scroll-snap-align: start;">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DCbj0_5NCKj/" data-instgrm-version="14" style="width:100%; max-width:320px; margin: auto;"></blockquote>
-      </div>
-
-      <!-- Post 2 -->
-      <div style="min-width: 320px; flex-shrink: 0; scroll-snap-align: start;">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DCbj0_5NCKj/" data-instgrm-version="14" style="width:100%; max-width:320px; margin: auto;"></blockquote>
-      </div>
-
-      <!-- Post 2 -->
-      <div style="min-width: 320px; flex-shrink: 0; scroll-snap-align: start;">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DCbj0_5NCKj/" data-instgrm-version="14" style="width:100%; max-width:320px; margin: auto;"></blockquote>
-      </div>
-
-      <!-- Post 2 -->
-      <div style="min-width: 320px; flex-shrink: 0; scroll-snap-align: start;">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DCbj0_5NCKj/" data-instgrm-version="14" style="width:100%; max-width:320px; margin: auto;"></blockquote>
-      </div>
-
-      <!-- Post 2 -->
-      <div style="min-width: 320px; flex-shrink: 0; scroll-snap-align: start;">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DCbj0_5NCKj/" data-instgrm-version="14" style="width:100%; max-width:320px; margin: auto;"></blockquote>
-      </div>
-
-      <!-- Post 2 -->
-      <div style="min-width: 320px; flex-shrink: 0; scroll-snap-align: start;">
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DCbj0_5NCKj/" data-instgrm-version="14" style="width:100%; max-width:320px; margin: auto;"></blockquote>
-      </div>
-      <!-- Repeat for remaining posts... -->
-      
+      <!-- Pagination dots -->
+      <div class="swiper-pagination"></div>
     </div>
   </div>
 </section>
@@ -616,6 +602,22 @@ With a background in media and communication, she brings a multidisciplinary app
 
   <!-- Instagram Embed Script (MUST be placed at end of body) -->
   <script async src="//www.instagram.com/embed.js"></script>
+
+  <script>
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    loop: true,
+  });
+</script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
 
 </body>
 
