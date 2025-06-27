@@ -29,31 +29,14 @@
 
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-
   <style>
-  /* Step 2: Force arrows to appear below, not on the sides */
-  .swiper-button-prev,
-  .swiper-button-next {
-    position: static !important; /* Remove default Swiper side position */
-    width: auto;
-    height: auto;
-    color: #007bff; /* Change color if you like */
-    font-size: 24px;
-    transform: none !important;
-  }
-
-  .swiper-controls {
-    margin-bottom: 20px;
-  }
-
   .swiper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    max-width: 960px;
+    margin: 0 auto;
   }
 
   .swiper-wrapper {
-    max-width: 1000px; /* Controls the overall width of the visible area */
+    display: flex;
   }
 
   .swiper-slide {
@@ -78,9 +61,8 @@
     font-size: 24px;
     transform: none !important;
   }
+</style>
 
-
-  </style>
 
 
 
