@@ -32,10 +32,12 @@
 
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  
   <style>
   .swiper {
     max-width: 960px;
-    margin: 0 auto;
+    margin: 0 auto 30px auto; /* space between slider rows */
   }
 
   .swiper-wrapper {
@@ -47,45 +49,66 @@
     justify-content: center;
   }
 
+  .swiper-slide blockquote.instagram-media {
+    max-width: 100% !important;
+  }
+
   .swiper-controls {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 30px;
     margin-top: 10px;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
   }
 
   .swiper-button-prev,
-.swiper-button-next {
-  position: static !important;
-  width: auto;
-  height: auto;
-  background: transparent;
-  border: none;
-  font-size: 20px;
-  color: #007bff;
-  cursor: pointer;
-  user-select: none;
-}
-  .swiper-slide blockquote.instagram-media {
-  max-width: 100% !important;
-}
+  .swiper-button-next {
+    position: static !important;
+    width: auto;
+    height: auto;
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    color: #007bff;
+    cursor: pointer;
+    user-select: none;
+  }
 
+  /* Optional: card styling for each slide */
   .insta-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 100%;
-}
+    width: 300px;
+    margin: 0 10px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 10px;
+    text-align: center;
+  }
 
-.insta-caption {
-  margin-top: 10px;
-  font-size: 15px;
-  text-align: center;
-  color: #444;
-  font-style: italic;
-}
+  .insta-caption {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #333;
+  }
 
+  /* Responsive layout */
+  @media (max-width: 991px) {
+    .insta-card {
+      width: 260px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .swiper {
+      max-width: 100%;
+    }
+
+    .insta-card {
+      width: 100%;
+    }
+  }
+    
 #about {
   margin-bottom: 20px; /* Small space below About Me */
   padding-bottom: 10px;
@@ -211,126 +234,39 @@
 
 
     
-<!-- Combined Portfolio Section -->
 <section id="portfolio" class="portfolio section light-background">
   <div class="container section-title" data-aos="fade-up">
-    <h2 style="text-align: center;">Portfolio</h2>
+    <h2>Portfolio</h2>
   </div>
 
-  <!-- Swiper Wrapper with Custom Controls for Each Slider -->
-  <div class="container" style="margin-bottom: 50px;">
-
-    <!-- Slider Group 1 -->
-    <div class="portfolio-slider">
-      <div class="swiper mySwiper1">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="insta-card">
-              <div class="insta-caption">Creative direction/Executive Production, Scriptwriting</div>
-              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DGxQC7GJYMB/" data-instgrm-version="14" style="width:100%; max-width:300px; margin:auto;"></blockquote>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="insta-card">
-              <div class="insta-caption">Videography</div>
-              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DDZ2K6moicq/" data-instgrm-version="14" style="width:100%; max-width:300px; margin:auto;"></blockquote>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="insta-card">
-              <div class="insta-caption">Creative direction/Executive Production, scriptwriting</div>
-              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DHDttp6se3_/" data-instgrm-version="14" style="width:100%; max-width:300px; margin:auto;"></blockquote>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="insta-card">
-              <div class="insta-caption">Creative Direction + Scriptwriting</div>
-              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DEAN2_RIYLx/" data-instgrm-version="14" style="width:100%; max-width:300px; margin:auto;"></blockquote>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-controls">
-        <div class="swiper-button-prev swiper-button-prev1"></div>
-        <div class="swiper-button-next swiper-button-next1"></div>
-      </div>
+  <!-- ROW 1 -->
+  <div class="swiper swiper-row1">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DGxQC7GJYMB/" data-instgrm-version="14"></blockquote></div>
+      <div class="swiper-slide"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DDZ2K6moicq/" data-instgrm-version="14"></blockquote></div>
+      <div class="swiper-slide"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DHDttp6se3_/" data-instgrm-version="14"></blockquote></div>
+      <div class="swiper-slide"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DEAN2_RIYLx/" data-instgrm-version="14"></blockquote></div>
     </div>
-
-    <!-- Slider Group 2 -->
-    <div class="portfolio-slider">
-      <div class="swiper mySwiper2">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="insta-card">
-              <div class="insta-caption">Creative direction/Executive Production, Scriptwriting, Voice Over</div>
-              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DFu5Zf3MbCp/" data-instgrm-version="14" style="width:100%; max-width:300px; margin:auto;"></blockquote>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="insta-card">
-              <div class="insta-caption">Videography</div>
-              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C3Zbqsqrt8d/" data-instgrm-version="14" style="width:100%; max-width:300px; margin:auto;"></blockquote>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="insta-card">
-              <div class="insta-caption">Creative direction/Executive Production, Scriptwriting</div>
-              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DDpD8LES-hj/" data-instgrm-version="14" style="width:100%; max-width:300px; margin:auto;"></blockquote>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="insta-card">
-              <div class="insta-caption">Creative Direction + Scriptwriting</div>
-              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C7BX2crLFBb/" data-instgrm-version="14" style="width:100%; max-width:300px; margin:auto;"></blockquote>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-controls">
-        <div class="swiper-button-prev swiper-button-prev2"></div>
-        <div class="swiper-button-next swiper-button-next2"></div>
-      </div>
+    <div class="swiper-controls" style="text-align:center; margin-top: 15px;">
+      <div class="swiper-button-prev row1-prev"></div>
+      <div class="swiper-button-next row1-next"></div>
     </div>
+  </div>
 
-    <!-- Slider Group 3 -->
-    <div class="portfolio-slider">
-      <div class="swiper mySwiper3">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="insta-card">
-              <div class="insta-caption">Creative Direction + Scriptwriting</div>
-              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DCbj0_5NCKj/" data-instgrm-version="14" style="width:100%; max-width:300px; margin:auto;"></blockquote>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="insta-card">
-              <div class="insta-caption">Creative Direction + Scriptwriting</div>
-              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DCbj0_5NCKj/" data-instgrm-version="14" style="width:100%; max-width:300px; margin:auto;"></blockquote>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="insta-card">
-              <div class="insta-caption">Videography (Phone Shot)</div>
-              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DCWyIY3ID_u/" data-instgrm-version="14" style="width:100%; max-width:300px; margin:auto;"></blockquote>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="insta-card">
-              <div class="insta-caption">Creative Direction + Scriptwriting</div>
-              <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C4fkaoaL21j/" data-instgrm-version="14" style="width:100%; max-width:300px; margin:auto;"></blockquote>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-controls">
-        <div class="swiper-button-prev swiper-button-prev3"></div>
-        <div class="swiper-button-next swiper-button-next3"></div>
-      </div>
+  <!-- ROW 2 -->
+  <div class="swiper swiper-row2" style="margin-top: 40px;">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DFu5Zf3MbCp/" data-instgrm-version="14"></blockquote></div>
+      <div class="swiper-slide"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C3Zbqsqrt8d/" data-instgrm-version="14"></blockquote></div>
+      <div class="swiper-slide"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DDpD8LES-hj/" data-instgrm-version="14"></blockquote></div>
+      <div class="swiper-slide"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C7BX2crLFBb/" data-instgrm-version="14"></blockquote></div>
     </div>
-
+    <div class="swiper-controls" style="text-align:center; margin-top: 15px;">
+      <div class="swiper-button-prev row2-prev"></div>
+      <div class="swiper-button-next row2-next"></div>
+    </div>
   </div>
 </section>
-
 
 
 <!-- Resume Section -->
@@ -523,25 +459,39 @@
   <script async src="//www.instagram.com/embed.js"></script>
 
   <script>
-  const swiper = new Swiper(".mySwiper", {
-    spaceBetween: 30,
+  new Swiper('.swiper-row1', {
+    slidesPerView: 3,
+    spaceBetween: 20,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: '.row1-next',
+      prevEl: '.row1-prev'
+    },
+    on: {
+      init: () => window.instgrm?.Embeds?.process(),
+      slideChange: () => window.instgrm?.Embeds?.process()
     },
     breakpoints: {
-      // When window width is >= 0px (phones)
-      0: {
-        slidesPerView: 1,
-      },
-      // When window width is >= 600px (tablets)
-      600: {
-        slidesPerView: 2,
-      },
-      // When window width is >= 1024px (desktops)
-      1024: {
-        slidesPerView: 3,
-      }
+      0: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 }
+    }
+  });
+
+  new Swiper('.swiper-row2', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: '.row2-next',
+      prevEl: '.row2-prev'
+    },
+    on: {
+      init: () => window.instgrm?.Embeds?.process(),
+      slideChange: () => window.instgrm?.Embeds?.process()
+    },
+    breakpoints: {
+      0: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 }
     }
   });
 </script>
