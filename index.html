@@ -118,6 +118,12 @@
   z-index: 1;
 }
 
+.instagram-media {
+  max-width: 300px;
+  min-height: 400px; /* Adjust if it's too short */
+}
+
+
 </style>
 
 
@@ -622,16 +628,14 @@ With a background in media and communication, she brings a multidisciplinary app
 
 
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <script>
-  const video = document.getElementById('introVideo');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-      video.pause();
+<script>
+  window.addEventListener("load", function () {
+    if (window.instgrm) {
+      window.instgrm.Embeds.process();
     }
   });
 </script>
+
 
 
 
