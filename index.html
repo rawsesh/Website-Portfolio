@@ -113,26 +113,18 @@
     }
   }
 
-.insta-card-overlay {
-  position: relative;
-  width: 100%;
+.insta-card-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.insta-caption-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 8px 12px;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
+.insta-caption-above {
   font-size: 14px;
   font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
   text-align: center;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  z-index: 2;
-  pointer-events: none; /* So users can still click on the embed */
 }
 
 #about {
@@ -269,32 +261,32 @@
   <div class="swiper swiper-row1">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <div class="insta-card-overlay">
-          <div class="insta-caption-overlay">
+        <div class="insta-card-stack">
+          <div class="insta-caption-above">
             Styled by Client A
           </div>
           <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DGxQC7GJYMB/" data-instgrm-version="14"></blockquote>
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="insta-card-overlay">
-          <div class="insta-caption-overlay">
-            Recipe creation & styling
+        <div class="insta-card-stack">
+          <div class="insta-caption-above">
+            Recipe Creation & Styling
           </div>
           <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DDZ2K6moicq/" data-instgrm-version="14"></blockquote>
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="insta-card-overlay">
-          <div class="insta-caption-overlay">
+        <div class="insta-card-stack">
+          <div class="insta-caption-above">
             Photography by Client B
           </div>
           <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DHDttp6se3_/" data-instgrm-version="14"></blockquote>
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="insta-card-overlay">
-          <div class="insta-caption-overlay">
+        <div class="insta-card-stack">
+          <div class="insta-caption-above">
             Social Media Campaign
           </div>
           <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DEAN2_RIYLx/" data-instgrm-version="14"></blockquote>
@@ -311,32 +303,32 @@
   <div class="swiper swiper-row2" style="margin-top: 40px;">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <div class="insta-card-overlay">
-          <div class="insta-caption-overlay">
+        <div class="insta-card-stack">
+          <div class="insta-caption-above">
             Video Editing by Client C
           </div>
           <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DFu5Zf3MbCp/" data-instgrm-version="14"></blockquote>
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="insta-card-overlay">
-          <div class="insta-caption-overlay">
+        <div class="insta-card-stack">
+          <div class="insta-caption-above">
             Product Launch Reel
           </div>
           <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C3Zbqsqrt8d/" data-instgrm-version="14"></blockquote>
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="insta-card-overlay">
-          <div class="insta-caption-overlay">
+        <div class="insta-card-stack">
+          <div class="insta-caption-above">
             Campaign Management
           </div>
           <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DDpD8LES-hj/" data-instgrm-version="14"></blockquote>
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="insta-card-overlay">
-          <div class="insta-caption-overlay">
+        <div class="insta-card-stack">
+          <div class="insta-caption-above">
             Styled Photoshoot
           </div>
           <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C7BX2crLFBb/" data-instgrm-version="14"></blockquote>
@@ -349,6 +341,7 @@
     </div>
   </div>
 </section>
+
 
 
 <!-- Resume Section -->
