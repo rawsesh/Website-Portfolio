@@ -594,12 +594,30 @@
 
 
 <script>
-  window.addEventListener("load", function () {
+  // Initialize Swiper
+  const swiper = new Swiper('.mySwiper', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    on: {
+      slideChange: () => {
+        // Re-process Instagram embeds on each slide change
+        if (window.instgrm) {
+          window.instgrm.Embeds.process();
+        }
+      }
+    }
+  });
+
+  // Also reprocess after window load in case Swiper starts on a visible slide
+  window.addEventListener("load", () => {
     if (window.instgrm) {
       window.instgrm.Embeds.process();
     }
   });
 </script>
+  
 
 
 
