@@ -340,6 +340,48 @@
       <div class="swiper-button-next row2-next"></div>
     </div>
   </div>
+
+  <!-- ROW 3 -->
+  <div class="swiper swiper-row3" style="margin-top: 40px;">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="insta-card-stack">
+          <div class="insta-caption-above">
+            Influencer Collaboration
+          </div>
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/EXAMPLE1/" data-instgrm-version="14"></blockquote>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="insta-card-stack">
+          <div class="insta-caption-above">
+            Behind the Scenes
+          </div>
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/EXAMPLE2/" data-instgrm-version="14"></blockquote>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="insta-card-stack">
+          <div class="insta-caption-above">
+            Promotional Reel
+          </div>
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/EXAMPLE3/" data-instgrm-version="14"></blockquote>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="insta-card-stack">
+          <div class="insta-caption-above">
+            Event Highlights
+          </div>
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/EXAMPLE4/" data-instgrm-version="14"></blockquote>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-controls" style="text-align:center; margin-top: 15px;">
+      <div class="swiper-button-prev row3-prev"></div>
+      <div class="swiper-button-next row3-next"></div>
+    </div>
+  </div>
 </section>
 
 
@@ -533,7 +575,8 @@
   <!-- Instagram Embed Script (MUST be placed at end of body) -->
   <script async src="//www.instagram.com/embed.js"></script>
 
-  <script>
+<script>
+  // Swiper Row 1
   new Swiper('.swiper-row1', {
     slidesPerView: 3,
     spaceBetween: 20,
@@ -552,6 +595,7 @@
     }
   });
 
+  // Swiper Row 2
   new Swiper('.swiper-row2', {
     slidesPerView: 3,
     spaceBetween: 20,
@@ -569,9 +613,29 @@
       1024: { slidesPerView: 3 }
     }
   });
+
+  // Swiper Row 3
+  new Swiper('.swiper-row3', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: '.row3-next',
+      prevEl: '.row3-prev'
+    },
+    on: {
+      init: () => window.instgrm?.Embeds?.process(),
+      slideChange: () => window.instgrm?.Embeds?.process()
+    },
+    breakpoints: {
+      0: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 }
+    }
+  });
 </script>
 
-  <script>
+<script>
+  // Ensure embeds render if visible at load
   window.onload = function () {
     if (window.instgrm) {
       window.instgrm.Embeds.process();
@@ -581,30 +645,10 @@
 
 
 
-<script>
-  // Initialize Swiper
-  const swiper = new Swiper('.mySwiper', {
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    on: {
-      slideChange: () => {
-        // Re-process Instagram embeds on each slide change
-        if (window.instgrm) {
-          window.instgrm.Embeds.process();
-        }
-      }
-    }
-  });
 
-  // Also reprocess after window load in case Swiper starts on a visible slide
-  window.addEventListener("load", () => {
-    if (window.instgrm) {
-      window.instgrm.Embeds.process();
-    }
-  });
-</script>
+
+
+
   
 
 
