@@ -187,6 +187,37 @@
   margin-top: 0 !important;
 }
 
+.photo-gallery {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.gallery-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.gallery-grid img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
+
 </style>
 
 
@@ -398,55 +429,6 @@
 
 </section>
 
-<!-- Photo Gallery Section -->
-<section id="photo-gallery" class="section light-background">
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Photo Gallery</h2>
-  </div>
-
-  <div class="swiper photo-slider">
-    <div class="swiper-wrapper">
-      <!-- Slide 1 -->
-      <div class="swiper-slide">
-        <img data-src="https://i.imgur.com/ztliHFk.jpeg" class="swiper-lazy img-fluid rounded shadow" alt="Photo 1">
-        <div class="swiper-lazy-preloader"></div>
-      </div>
-
-      <!-- Slide 2 -->
-      <div class="swiper-slide">
-        <img data-src="https://i.imgur.com/s0MktuC.jpeg" class="swiper-lazy img-fluid rounded shadow" alt="Photo 2">
-        <div class="swiper-lazy-preloader"></div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="swiper-slide">
-        <img data-src="https://i.imgur.com/RRWxqjZ.jpeg" class="swiper-lazy img-fluid rounded shadow" alt="Photo 3">
-        <div class="swiper-lazy-preloader"></div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="swiper-slide">
-        <img data-src="https://i.imgur.com/sxQ3QTw.jpeg" class="swiper-lazy img-fluid rounded shadow" alt="Photo 3">
-        <div class="swiper-lazy-preloader"></div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="swiper-slide">
-        <img data-src="https://i.imgur.com/cT0j2LJ.jpeg" class="swiper-lazy img-fluid rounded shadow" alt="Photo 3">
-        <div class="swiper-lazy-preloader"></div>
-      </div>
-      <!-- Add more slides as needed -->
-
-    <!-- Navigation buttons -->
-    <div class="swiper-controls text-center mt-3">
-      <div class="swiper-button-prev photo-prev"></div>
-      <div class="swiper-button-next photo-next"></div>
-    </div>
-  </div>
-</section>
-
-
-
 <!-- Resume Section -->
 <section id="resume" class="resume section">
 
@@ -478,6 +460,17 @@
   </div>
 </div>
 
+<!-- Photo Gallery Section -->
+<section class="photo-gallery">
+  <h2 class="gallery-title">Photo Gallery</h2>
+  <div class="gallery-grid">
+    <img src="assets/images/1.jpg" alt="Photo 1">
+    <img src="assets/images/2.jpg" alt="Photo 2">
+    <img src="assets/images/3.jpg" alt="Photo 3">
+    <img src="assets/images/4.jpg" alt="Photo 4">
+    <img src="assets/images/5.jpg" alt="Photo 5">
+  </div>
+</section>
 
 
       <div class="container">
