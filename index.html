@@ -398,6 +398,53 @@
 
 </section>
 
+<!-- Photo Gallery Section -->
+<section id="photo-gallery" class="section light-background">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Photo Gallery</h2>
+  </div>
+
+  <div class="swiper photo-slider">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <img data-src="https://imgur.com/ztliHFk" class="swiper-lazy img-fluid rounded shadow" alt="Photo 1">
+        <div class="swiper-lazy-preloader"></div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <img data-src="https://imgur.com/s0MktuC" class="swiper-lazy img-fluid rounded shadow" alt="Photo 2">
+        <div class="swiper-lazy-preloader"></div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <img data-src="https://imgur.com/RRWxqjZ" class="swiper-lazy img-fluid rounded shadow" alt="Photo 3">
+        <div class="swiper-lazy-preloader"></div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <img data-src="https://imgur.com/cT0j2LJ" class="swiper-lazy img-fluid rounded shadow" alt="Photo 3">
+        <div class="swiper-lazy-preloader"></div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <img data-src="https://imgur.com/s0MktuC" class="swiper-lazy img-fluid rounded shadow" alt="Photo 3">
+        <div class="swiper-lazy-preloader"></div>
+      </div>
+      <!-- Add more slides as needed -->
+
+    <!-- Navigation buttons -->
+    <div class="swiper-controls text-center mt-3">
+      <div class="swiper-button-prev photo-prev"></div>
+      <div class="swiper-button-next photo-next"></div>
+    </div>
+  </div>
+</section>
+
 
 
 <!-- Resume Section -->
@@ -657,10 +704,35 @@
   };
 </script>
 
+<script>
+  const photoSlider = new Swiper('.photo-slider', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    lazy: true,
+    preloadImages: false,
+    navigation: {
+      nextEl: '.photo-next',
+      prevEl: '.photo-prev',
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      }
+    }
+  });
+</script>
 
 
-
-
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
 
   
