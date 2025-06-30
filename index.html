@@ -218,6 +218,52 @@
   transform: scale(1.03);
 }
 
+#hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+}
+
+.slideshow-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: fade 25s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+/* Staggered delays for 5 slides (each slide shows for ~5s) */
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 5s; }
+.slide:nth-child(3) { animation-delay: 10s; }
+.slide:nth-child(4) { animation-delay: 15s; }
+.slide:nth-child(5) { animation-delay: 20s; }
+
+@keyframes fade {
+  0%, 19%   { opacity: 0; }
+  20%, 39%  { opacity: 1; }
+  40%, 100% { opacity: 0; }
+}
+
+#hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+
 </style>
 
 
@@ -260,18 +306,23 @@
 
   <!-- Hero Section -->
 <section id="hero" class="hero section dark-background">
-
-  <img src="assets/img/hero-fallback.jpg" alt="" data-aos="fade-in" class="">
+  <div class="slideshow-wrapper">
+    <div class="slide" style="background-image: url('assets/img/1.jpg');"></div>
+    <div class="slide" style="background-image: url('assets/img/2.jpg');"></div>
+    <div class="slide" style="background-image: url('assets/img/3.JPG');"></div>
+    <div class="slide" style="background-image: url('assets/img/4.jpg');"></div>
+    <div class="slide" style="background-image: url('assets/img/5.jpg');"></div>
+  </div>
 
   <div class="container" data-aos="fade-up" data-aos-delay="100">
     <h2>Anushka Sharma</h2>
     <p>I'm a 
-      <span class="typed" data-typed-items="Marketing Professional, Brand Strategist, Communications Specialist, Media Strategist">Media Strategist</span>
+      <span class="typed" data-typed-items="Social Media Strategist, Creative Director (Digital Content), Brand Marketing Specialist">Brand Marketing Specialist</span>
       <span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
     </p>
   </div>
+</section>
 
-</section><!-- /Hero Section -->
 
 
 
@@ -302,7 +353,7 @@
           <div class="insta-caption-above">
             Creative Direction/Executive Production, Scriptwriting 
           </div>
-          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DGxQC7GJYMB/" data-instgrm-version="14"></blockquote>
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DG2Vk2wMaCz/" data-instgrm-version="14"></blockquote>
         </div>
       </div>
       <div class="swiper-slide">
@@ -318,15 +369,15 @@
           <div class="insta-caption-above">
             Creative Direction/Executive Production, Scriptwriting 
           </div>
-          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DHDttp6se3_/" data-instgrm-version="14"></blockquote>
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DDpD8LES-hj/" data-instgrm-version="14"></blockquote>
         </div>
       </div>
       <div class="swiper-slide">
         <div class="insta-card-stack">
           <div class="insta-caption-above">
-            Videography
+            Creative Direction/Executive Production, Scriptwriting 
           </div>
-          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C3Zbqsqrt8d/" data-instgrm-version="14"></blockquote>
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DHDttp6se3_/" data-instgrm-version="14"></blockquote>
         </div>
       </div>
     </div>
@@ -342,9 +393,9 @@
       <div class="swiper-slide">
         <div class="insta-card-stack">
           <div class="insta-caption-above">
-            Creative Direction/Executive Production, Scriptwriting, Voice Over
+            Executive Production
           </div>
-          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DFu5Zf3MbCp/" data-instgrm-version="14"></blockquote>
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DD9qi-ihIBU/" data-instgrm-version="14"></blockquote>
         </div>
       </div>
       <div class="swiper-slide">
@@ -358,17 +409,17 @@
       <div class="swiper-slide">
         <div class="insta-card-stack">
           <div class="insta-caption-above">
-            Creative Direction/Executive Production, Scriptwriting 
+            Creative direction/Executive Production, Conceptualisation, Research
           </div>
-          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DDpD8LES-hj/" data-instgrm-version="14"></blockquote>
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DJmLvGMpkeR/" data-instgrm-version="14"></blockquote>
         </div>
       </div>
       <div class="swiper-slide">
         <div class="insta-card-stack">
           <div class="insta-caption-above">
-            Creative Direction/Executive Production, Scriptwriting 
+            Creative Direction/Executive Production
           </div>
-          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DCWyIY3ID_u/" data-instgrm-version="14"></blockquote>
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DDXFKuFoFFW/" data-instgrm-version="14"></blockquote>
         </div>
       </div>
     </div>
@@ -400,17 +451,17 @@
       <div class="swiper-slide">
         <div class="insta-card-stack">
           <div class="insta-caption-above">
-            (Nothing here?)
+            Executive Production
           </div>
-          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DEAN2_RIYLx/" data-instgrm-version="14"></blockquote>
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DKZkEBuMdts/" data-instgrm-version="14"></blockquote>
         </div>
       </div>
       <div class="swiper-slide">
         <div class="insta-card-stack">
           <div class="insta-caption-above">
-            (Nothing here?)
+            
           </div>
-          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C7BX2crLFBb/" data-instgrm-version="14"></blockquote>
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C4fkaoaL21j/" data-instgrm-version="14"></blockquote>
         </div>
       </div>
     </div>
@@ -427,20 +478,19 @@
 </div>
 
 
-<!-- Photo Gallery Section -->
-<section class="photo-gallery">
-  <h2 class="gallery-title">Photo Gallery</h2>
+<section class="photo-gallery section light-background">
+  <div class="container section-title text-start" data-aos="fade-up">
+    <h2>Photo Gallery</h2>
+  </div>
   <div class="gallery-grid">
-    <img src="assets/images/logo.jpg" alt="Photo 1">
-    <img src="assets/images/2.jpg" alt="Photo 2">
-    <img src="assets/images/3.jpg" alt="Photo 3">
-    <img src="assets/images/4.jpg" alt="Photo 4">
-    <img src="assets/images/5.jpg" alt="Photo 5">
+    <img src="assets/img/1.jpg" alt="Photo 1">
+    <img src="assets/img/2.jpg" alt="Photo 2">
+    <img src="assets/img/3.JPG" alt="Photo 3">
+    <img src="assets/img/4.jpg" alt="Photo 4">
+    <img src="assets/img/5.jpg" alt="Photo 5">
   </div>
 </section>
 
-
-</section>
 
 <!-- Resume Section -->
 <section id="resume" class="resume section">
