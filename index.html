@@ -306,13 +306,10 @@
 
   <!-- Hero Section -->
 <section id="hero" class="hero section dark-background">
-  <div class="slideshow-wrapper">
-    <div class="slide" style="background-image: url('assets/img/1.webp');"></div>
-    <div class="slide" style="background-image: url('assets/img/2.webp');"></div>
-    <div class="slide" style="background-image: url('assets/img/3.webp');"></div>
-    <div class="slide" style="background-image: url('assets/img/4.webp');"></div>
-    <div class="slide" style="background-image: url('assets/img/5.webp');"></div>
+  <div class="slideshow-wrapper" id="slideshow-wrapper">
+  <div class="slide" style="background-image: url('assets/img/1.webp');"></div>
   </div>
+
     
   <div class="container" data-aos="fade-up" data-aos-delay="100">
     <h2>Anushka Sharma</h2>
@@ -779,6 +776,29 @@
 
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<script>
+    window.addEventListener('load', function () {
+      const imagePaths = [
+        'assets/img/2.webp',
+        'assets/img/3.webp',
+        'assets/img/4.webp',
+        'assets/img/5.webp'
+      ];
+
+      const slideshowWrapper = document.getElementById('slideshow-wrapper');
+
+      imagePaths.forEach((path, index) => {
+        setTimeout(() => {
+          const slide = document.createElement('div');
+          slide.classList.add('slide');
+          slide.style.backgroundImage = `url('${path}')`;
+          slide.style.animationDelay = `${(index + 1) * 5}s`;
+          slideshowWrapper.appendChild(slide);
+        }, 1500 + index * 1000);
+      });
+    });
+  </script>
 
 
   
